@@ -2,7 +2,6 @@ package test_cases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import pages.HomePage;
@@ -15,15 +14,13 @@ public class TestCase001_CheckHomePage extends TestBase {
 	ShopPage shopPage;
 	WebElement element;
 
-	@Test(priority = 2, groups = "smoke", description = "Choose Shop Tob")
+	@Test(priority = 2, groups = "smoke", description = "Choose Shop Tap")
 	public void ChooseSearchPage() throws InterruptedException {
 		homePage = new HomePage(driver);
 		shopPage = new ShopPage(driver);
 
 		homePage.chooseShopPage();
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("(//div[@class=\"overlay jx_ui_Widget\"])[2]")).click();
-		Thread.sleep(3000);
 		// scroll to view element
 		PageBase.scrollToViewElement(driver, element = driver.findElement(By.xpath("//h2[text()='Greeting Card']")));
 		Thread.sleep(5000);

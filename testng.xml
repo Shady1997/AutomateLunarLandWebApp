@@ -9,7 +9,7 @@
 	<test name="Test Home Page Functions">
 		<parameter name="browser" value="Chrome" />
 		<classes>
-			<class name="test_cases.TestCase001_CheckHomePage">
+			<class name="test_cases.SimpleTest">
 				<methods>
 					<exclude name="" />
 				</methods>
